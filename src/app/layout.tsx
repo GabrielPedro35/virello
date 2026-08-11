@@ -19,6 +19,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/images/favicon.png",
+  },
   title: "Virello · Specialty Coffee",
   description:
     "Virelloialty Coffee — Her yudumda bir hikâye. Özenle seçilmiş tek köken kahveler ve el yapımı blendler.",
