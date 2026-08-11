@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand Colors — Virello Dark Theme */
+  --color-brand-bg:     #0F0C09;
+  --color-brand-card:   #1A1410;
+  --color-brand-dark:   #2B1F14;
+  --color-brand-gold:   #C9A96E;
+  --color-brand-cream:  #F2E8D5;
+  --color-brand-muted:  #7A6A5A;
+  --color-brand-footer: #0A0806;
+
+  /* Legacy aliases (existing code might use these) */
+  --color-espresso: #0F0C09;
+  --color-cream: #F2E8D5;
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0F0C09;
+  color: #F2E8D5;
+  font-family: var(--font-inter), var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
+}
+
+/* Section layering */
+.section-layer {
+  position: relative;
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+  margin-top: -36px;
+  z-index: 1;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
